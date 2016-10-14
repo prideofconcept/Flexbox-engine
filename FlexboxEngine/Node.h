@@ -8,15 +8,17 @@
 #include <vector>
 
 namespace FlexBoxEngine {
-    /*
-     * Node - holds and id and a list of component-styles.
+
+    /* Node
+     * Node - holds an id.
      * Represents a single DOM element*/
     struct Node {
 
             int id = 1;
-
     };
 
+    /* NodeManger
+     * Controls creation of Nodes */
     class NodeManager {
 
         std::vector<Node> _nodes;
@@ -25,21 +27,8 @@ namespace FlexBoxEngine {
 
     public:
 
-        Node create() {
-
-            _next.id = numNodes + 1;
-            _nodes.push_back(_next);
-            numNodes++;
-
-            return _next;
-
-        }
-
-        bool alive() {
-
-            return true;
-
-        }
+        Node create();
+        bool alive();
     };
 }
 
