@@ -6,10 +6,10 @@
 using namespace std;
 
 int main() {
-    FlexBoxEngine::NodeManager nodeMgr;
-    FlexBoxEngine::Node n = nodeMgr.create();
+    FlexBoxEngine::DOM dom;
+    FlexBoxEngine::Node n = dom.create();
 
-    FlexBoxEngine::Node n1 = nodeMgr.create();
+    FlexBoxEngine::Node n1 = dom.create();
 
     cout << "Hello, World! My node id=" << n.id << "\n";
     cout << "Hello, World! My node id=" << n1.id << "\n";
