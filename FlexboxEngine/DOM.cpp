@@ -3,7 +3,6 @@
 //
 
 #include "DOM.h"
-#include "Node.h"
 
 namespace FlexBoxEngine {
 
@@ -17,7 +16,8 @@ namespace FlexBoxEngine {
 
     }
 
-    bool DOM::alive() {
-        return true;
+
+    bool DOM::insertFragment(const Node& par, const Node& child) {
+        return false;
     }
 }

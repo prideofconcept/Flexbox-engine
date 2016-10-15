@@ -13,14 +13,17 @@ namespace FlexBoxEngine {
      * Holds information and settings for Nodes */
     class DOM {
 
-        std::vector<Node> _nodes;
-        Node _next;
-        int numNodes = 0;
+	    std::vector<Node> _nodes;
+
+
+	    Node _next;
+	    int numNodes = 0;
 
     public:
 
-        Node create();
-        bool alive();
+	    Node create();
+	    bool insertFragment(const Node& par, const Node& child);
+
     };
 }
 
