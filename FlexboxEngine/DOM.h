@@ -6,6 +6,7 @@
 #define FLEXBOXENGINE_DOM_H
 
 #include "Node.h"
+#include "Style.h"
 
 namespace FlexBoxEngine {
     /* NodeManger
@@ -15,15 +16,16 @@ namespace FlexBoxEngine {
 
 	    std::vector<Node> _nodes;
 
-
 	    Node _next;
 	    int numNodes = 0;
 
     public:
 
-	    Node create();
+	    Node createNode();
 	    bool insertFragment(const Node& par, const Node& child);
 
+		std::vector<FlexBoxEngine::DimensionComponent> dimensions;
+		std::vector<FlexBoxEngine::RelationshipComponent> parents;
     };
 }
 

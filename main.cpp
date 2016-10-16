@@ -1,17 +1,28 @@
 #include <iostream>
 
 #include "FlexboxEngine/DOM.h"
+#include "FlexboxEngine/Processor.h"
 
 
 using namespace std;
 
 int main() {
-    FlexBoxEngine::DOM dom;
-    FlexBoxEngine::Node n = dom.create();
+    FlexBoxEngine::DOM myDOM;
 
-    FlexBoxEngine::Node n1 = dom.create();
+    FlexBoxEngine::Node root = myDOM.createNode();
+    FlexBoxEngine::Node box1 = myDOM.createNode();
+    //setWidth(root, 100);
+    //setProperty('width', 100);
 
-    cout << "Hello, World! My node id=" << n.id << "\n";
-    cout << "Hello, World! My node id=" << n1.id << "\n";
+    FlexBoxEngine::DimensionComponent box1Dimensions;
+    box1Dimensions.dimension.height = 100;
+    box1Dimensions.dimension.width = 100;
+
+    FlexBoxEngine::Processor layoutEngine;
+    layoutEngine.init(myDOM);
+
+    layoutEngine.setProperty(box1, box1Dimensions );
+    layoutEngine.calculateLayout();
+
     return 0;
 }

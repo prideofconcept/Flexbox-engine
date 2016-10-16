@@ -4,7 +4,9 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FlexboxEngine/Processor.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/FlexboxEngine/DOM.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FlexboxEngine/Processor.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/FlexboxEngine/DOM.h" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
